@@ -18,6 +18,11 @@ head.next.next.next = new ListNode(3);
 head.next.next.next.next = new ListNode(4);
 head.next.next.next.next.next = new ListNode(5);
 
+const printList = (head) => {
+    let node = head;
+    while(node !== null) console.log(node.val);
+}
+printList(head);
 const printTree = (root) => {
     if(root === null) return;
     printTree(root.left);
@@ -38,6 +43,7 @@ var sortedListToBST = function(head) {
 		let curr = head;
 		let prev = null;
 		while(fast !== null && fast.next !== null) {
+            
 			fast = fast.next.next;
 			prev = curr;
 			curr = curr.next;
@@ -51,5 +57,5 @@ var sortedListToBST = function(head) {
 	return solve(temp);
 };
 
-let ans = sortedListToBST(head);
-printTree(ans);
+// let ans = sortedListToBST(head);
+// printTree(ans);
