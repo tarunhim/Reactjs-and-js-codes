@@ -11,16 +11,19 @@ class TreeNode {
         this.right = right;
     }
 }
-let head = new ListNode(0);
-head.next = new ListNode(1);
-head.next.next = new ListNode(2);
-head.next.next.next = new ListNode(3);
-head.next.next.next.next = new ListNode(4);
-head.next.next.next.next.next = new ListNode(5);
+let head = new ListNode(0,null);
+head.next = new ListNode(1,null);
+head.next.next = new ListNode(2,null);
+head.next.next.next = new ListNode(3,null);
+head.next.next.next.next = new ListNode(4,null);
+head.next.next.next.next.next = new ListNode(5,null);
 
 const printList = (head) => {
     let node = head;
-    while(node !== null) console.log(node.val);
+    while(node !== null) {
+        console.log(node.val);
+        node = node.val;
+    }
 }
 printList(head);
 const printTree = (root) => {
