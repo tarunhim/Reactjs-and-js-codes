@@ -22,12 +22,13 @@ const printList = (head) => {
     let node = head;
     while(node !== null) {
         console.log(node.val);
-        node = node.val;
+        node = node.next;
     }
 }
-printList(head);
+// printList(head);
 const printTree = (root) => {
     if(root === null) return;
+
     printTree(root.left);
     console.log(root.val);
     printTree(root.right);
@@ -41,7 +42,7 @@ var sortedListToBST = function(head) {
 	temp.next = head;
 	const solve = (head) => {
 		if(head.next === null){ return null }
-		if(head.next.next === null){ return new ListNode(head.next.val,null,null)}
+		if(head.next.next === null){ return new TreeNode(head.next.val,null,null)}
 		let fast = head;
 		let curr = head;
 		let prev = null;
@@ -60,5 +61,7 @@ var sortedListToBST = function(head) {
 	return solve(temp);
 };
 
-// let ans = sortedListToBST(head);
-// printTree(ans);
+let ans = sortedListToBST(head);
+// console.log(ans.val);
+// console.log(ans.left);
+printTree(ans);
