@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './allcodes/login-and-authentication/App';
+import App from './allcodes/weather-code/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
