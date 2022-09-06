@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './allcodes/Ecommorce-code/App';
+import App from './allcodes/login-and-authentication/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
